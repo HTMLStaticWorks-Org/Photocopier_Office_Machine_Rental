@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — LUMINA Immersive Light Exhibit</title>
+  <meta name="description"
+    content="Discover the curatorial vision, zero-carbon photonics research, neuro-aesthetic well-being, and historic turbineworks architecture behind LUMINA: Immersive Art & Light Installation Exhibit.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Reveal-on-scroll: flag JS before first paint to avoid a flash -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo"><img src="assets/images/campusly-logo.svg" alt="LUMINA" class="logo-img"></a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="services.html" class="nav-link">Tickets</a>
+        <a href="counselors.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link ">Journal</a>
+        <a href="contact.html" class="nav-link ">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary" style="padding: 8px 20px;">Login</a>
+      </div>
+      <button class="hamburger" aria-label="Menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay"></div>
+  <div class="nav-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="logo"><img src="assets/images/campusly-logo.svg" alt="LUMINA" class="logo-img"></a>
+      <button class="drawer-close" aria-label="Close Menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="services.html" class="nav-link">Tickets</a>
+        <a href="counselors.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link ">Journal</a>
+        <a href="contact.html" class="nav-link ">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+    </nav>
+    <div class="drawer-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+      <div class="drawer-actions-row">
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Header (Layout identical to tickets.html) -->
+    <section class="page-hero has-grid">
+      <div class="container" style="text-align: center;">
+        <span class="eyebrow animate-fade-up"><span class="eyebrow-dot"></span> The Institution &amp; Curatorial Vision</span>
+        <h1 class="animate-fade-up delay-1">About LUMINA</h1>
+        <p class="lead animate-fade-up delay-2" style="max-width: 680px; margin: 0 auto;">Pioneering the intersection of optical physics, spatial architecture, and sensory neuroscience to sculpt unforgettable journeys of pure radiant light.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 1: The Curatorial Manifesto & Founding Genesis -->
+    <section class="section" id="manifesto">
+      <div class="container split-row">
+        <div class="split-copy split-copy--center animate-fade-up">
+          <span class="eyebrow" style="margin-bottom: var(--spacing-2); display: inline-flex;"><span class="eyebrow-dot"></span> Curatorial Manifesto</span>
+          <h2>The Genesis: Beyond the White Cube</h2>
+          <p class="lead">Art transformed from a passive frame on a wall into a living, responsive architecture of photons.</p>
+          <p>Founded in 2021 by a pioneering cross-disciplinary collective of laser physicists, scenographers, and spatial acoustic engineers, LUMINA was conceived as a direct antidote to conventional static galleries. We asked a fundamental question: <em>What if visitors did not merely view light, but inhabited it?</em></p>
+          <ul style="margin: var(--spacing-4) 0;">
+          </ul>
+          <div style="padding: var(--spacing-4); background-color: var(--bg-subtle); border-radius: var(--radius); margin-top: var(--spacing-4); border-left: 3px solid var(--accent);">
+            <p style="font-weight: var(--weight-label); color: var(--accent); margin-bottom: var(--spacing-2);"><i class="ph ph-sparkle"></i> The Curatorial Axiom</p>
+            <p class="caption" style="color: var(--text-muted); font-style: italic; margin: 0;">"Light is the only universal language that bypasses intellectual cynicism to touch human emotion directly at the speed of perception."</p>
+          </div>
+        </div>
+        <div class="split-media animate-fade-up">
+          <div style="position: relative; overflow: hidden; border-radius: var(--radius); box-shadow: var(--shadow-lg);">
+            <img src="assets/images/about-manifesto-hall.jpg" alt="LUMINA Grand Installation Hall & Visitors"
+              style="border-radius: var(--radius); width: 100%; display: block;">
+            <div style="position: absolute; bottom: 12px; left: 12px; right: 12px; background: rgba(5, 6, 14, 0.85); backdrop-filter: blur(8px); padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 0.8rem; color: var(--accent); font-weight: 500;"><i class="ph ph-aperture"></i> Grand Pavilion Atrium</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">15,000 sq. ft. Continuous Optical Field</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Next-Gen Photonics & Zero-Carbon Optical Engineering -->
+    <section class="section" id="photonics-lab" style="background-color: var(--bg-subtle);">
+      <div class="container split-row">
+        <div class="split-media animate-fade-up">
+          <div style="position: relative; overflow: hidden; border-radius: var(--radius); box-shadow: var(--shadow-lg);">
+            <img src="assets/images/about-photonics-lab.jpg" alt="LUMINA Photonics Research & Laser Laboratory"
+              style="border-radius: var(--radius); width: 100%; display: block;">
+            <div style="position: absolute; bottom: 12px; left: 12px; right: 12px; background: rgba(5, 6, 14, 0.85); backdrop-filter: blur(8px); padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 0.8rem; color: var(--accent-2); font-weight: 500;"><i class="ph ph-flask"></i> Laboratory 4A &middot; Precision Photonics</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">0.001µm Laser Calibration</span>
+            </div>
+          </div>
+        </div>
+        <div class="split-copy split-copy--center animate-fade-up delay-1">
+          <span class="eyebrow" style="margin-bottom: var(--spacing-2); display: inline-flex;"><span class="eyebrow-dot"></span> Sustainable Technology</span>
+          <h2>Precision Photonics &amp; Clean Light</h2>
+          <p class="lead">Monumental optical power engineered with zero-compromise environmental stewardship.</p>
+          <p>Behind LUMINA's ethereal atmospheres is a custom high-efficiency photonics infrastructure created in partnership with leading university optics departments. We rejected power-hungry legacy exhibition hardware in favor of breakthrough solid-state laser innovations.</p>
+          <ul style="margin: var(--spacing-4) 0;">
+            <li style="margin-bottom: var(--spacing-2);"><strong>92% Reduced Thermal Load:</strong> Custom cold-phosphor solid-state diode engines produce blinding chromatic brilliance while remaining cool to the touch.</li>
+            <li style="margin-bottom: var(--spacing-2);"><strong>100% Renewable Grid:</strong> Powered continuously by regional wind turbines and solar storage, making every ticket carbon-negative.</li>
+          </ul>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-3); margin-top: var(--spacing-4);">
+            <div style="background: var(--bg-elevated); padding: var(--spacing-3); border-radius: var(--radius-sm); border: 1px solid var(--border); text-align: center;">
+              <div style="font-size: 1.4rem; font-weight: 700; color: var(--accent);">92.2%</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Energy Saved</div>
+            </div>
+            <div style="background: var(--bg-elevated); padding: var(--spacing-3); border-radius: var(--radius-sm); border: 1px solid var(--border); text-align: center;">
+              <div style="font-size: 1.4rem; font-weight: 700; color: var(--accent-2);">98.4%</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Water Reclaimed</div>
+            </div>
+            <div style="background: var(--bg-elevated); padding: var(--spacing-3); border-radius: var(--radius-sm); border: 1px solid var(--border); text-align: center;">
+              <div style="font-size: 1.4rem; font-weight: 700; color: var(--success);">100%</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Renewable Power</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Neuro-Aesthetics & Sensory Inclusivity -->
+    <section class="section" id="neuro-aesthetics">
+      <div class="container split-row">
+        <div class="split-copy split-copy--center animate-fade-up">
+          <span class="eyebrow" style="margin-bottom: var(--spacing-2); display: inline-flex;"><span class="eyebrow-dot"></span> Cognitive Science</span>
+          <h2>Neuro-Aesthetics &amp; Sensory Well-Being</h2>
+          <p class="lead">Harmonizing light wavelengths and acoustic frequencies to soothe the human nervous system.</p>
+          <p>LUMINA works alongside researchers in neuro-aesthetics and cognitive psychology to study how visual harmonics impact mental health. Rather than causing chaotic sensory bombardment, our chambers are programmed as restorative therapeutic journeys.</p>
+          <ul style="margin: var(--spacing-4) 0;">
+            <li style="margin-bottom: var(--spacing-2);"><strong>40Hz Auditory-Visual Entrainment:</strong> Gentle gamma and alpha pulsing light sequences clinically shown to lower cortisol and encourage meditative brain states.</li>
+          </ul>
+          <div style="padding: var(--spacing-4); background-color: var(--bg-subtle); border-radius: var(--radius); margin-top: var(--spacing-4);">
+            <p style="font-weight: var(--weight-label); color: var(--accent); margin-bottom: var(--spacing-2);"><i class="ph ph-shield-check"></i> Welcoming All Explorers</p>
+            <p class="caption" style="color: var(--text-muted); font-style: italic; margin: 0;">"No strobe effects or sudden concussive flashes are ever used in primary visitor zones. LUMINA is designed as a sanctuary of gentle wonder for every age and sensitivity profile."</p>
+          </div>
+        </div>
+        <div class="split-media animate-fade-up">
+          <div style="position: relative; overflow: hidden; border-radius: var(--radius); box-shadow: var(--shadow-lg);">
+            <img src="assets/images/about-neuro-sanctuary.jpg" alt="Visitor in LUMINA Sensory Meditation & Well-Being Sanctuary"
+              style="border-radius: var(--radius); width: 100%; display: block;">
+            <div style="position: absolute; bottom: 12px; left: 12px; right: 12px; background: rgba(5, 6, 14, 0.85); backdrop-filter: blur(8px); padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 0.8rem; color: var(--accent); font-weight: 500;"><i class="ph ph-heartbeat"></i> Decompression Lounge</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Calibrated 40Hz Harmonic Field</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: The LUMINA Creative Fellowship & Emerging Artist Labs -->
+    <section class="section has-mesh" id="fellowship" style="background-color: var(--bg-subtle);">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <div class="divider-rule"></div>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Grants &amp; Innovation</span>
+          <h2>The LUMINA Creative Fellowship</h2>
+          <p>Reinvesting 15% of annual admission revenue to foster the next generation of spatial light and acoustic innovators.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--spacing-5); margin-top: var(--spacing-6);">
+          <!-- Fellowship Track 1 -->
+          <div class="card animate-fade-up delay-1" style="align-items: flex-start; text-align: left; padding: var(--spacing-5); position: relative; border-top: 3px solid var(--accent);">
+            <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: var(--spacing-2); display: block;">Track 01 &middot; 6-Month Residency</span>
+            <h3 style="margin-bottom: var(--spacing-2);">Volumetric Holography &amp; Scenography</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: var(--spacing-4);">Supporting visual artists experimenting with sub-wavelength solid-state laser projection, aerial mist diffraction, and algorithmic geometric forms.</p>
+            <ul style="list-style: none; padding: 0; margin: 0 0 var(--spacing-4) 0; font-size: 0.85rem; color: var(--text-main); display: flex; flex-direction: column; gap: var(--spacing-2);">
+              <li><i class="ph-fill ph-check-circle" style="color: var(--accent);"></i> $50,000 unrestricted production grant</li>
+              <li><i class="ph-fill ph-check-circle" style="color: var(--accent);"></i> Full access to Laboratory 4A laser rigs</li>
+              <li><i class="ph-fill ph-check-circle" style="color: var(--accent);"></i> 2-week showcase in Main Exhibition Hall</li>
+            </ul>
+            <div style="background: var(--bg-main); padding: 8px 12px; border-radius: 6px; width: 100%; border: 1px solid var(--border);">
+              <span style="font-size: 0.75rem; color: var(--accent);">Recent Fellow Project:</span>
+              <p style="font-size: 0.82rem; margin: 0; color: var(--text-main); font-weight: 500;">"Crystalline Lattice" by Maya Lin-Vance</p>
+            </div>
+          </div>
+
+          <!-- Fellowship Track 2 -->
+          <div class="card animate-fade-up delay-2" style="align-items: flex-start; text-align: left; padding: var(--spacing-5); position: relative; border-top: 3px solid var(--accent-2);">
+            <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-2); margin-bottom: var(--spacing-2); display: block;">Track 02 &middot; 6-Month Residency</span>
+            <h3 style="margin-bottom: var(--spacing-2);">Bio-Responsive Computing &amp; Flora</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: var(--spacing-4);">Equipping creative technologists developing touch-reactive botanical fiber optics, tactile haptic feedback surfaces, and environmental sensors.</p>
+            <ul style="list-style: none; padding: 0; margin: 0 0 var(--spacing-4) 0; font-size: 0.85rem; color: var(--text-main); display: flex; flex-direction: column; gap: var(--spacing-2);">
+              <li><i class="ph-fill ph-check-circle" style="color: var(--accent-2);"></i> $50,000 unrestricted production grant</li>
+              <li><i class="ph-fill ph-check-circle" style="color: var(--accent-2);"></i> Rapid PCB &amp; fiber fabrication studio</li>
+              <li><i class="ph-fill ph-check-circle" style="color: var(--accent-2);"></i> Mentorship from senior MIT Media Lab</li>
+            </ul>
+            <div style="background: var(--bg-main); padding: 8px 12px; border-radius: 6px; width: 100%; border: 1px solid var(--border);">
+              <span style="font-size: 0.75rem; color: var(--accent-2);">Recent Fellow Project:</span>
+              <p style="font-size: 0.82rem; margin: 0; color: var(--text-main); font-weight: 500;">"Mycelial Pulse" by Tariq Al-Mansoor</p>
+            </div>
+          </div>
+
+          <!-- Fellowship Track 3 -->
+          <div class="card animate-fade-up delay-3" style="align-items: flex-start; text-align: left; padding: var(--spacing-5); position: relative; border-top: 3px solid var(--accent-3);">
+            <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-3); margin-bottom: var(--spacing-2); display: block;">Track 03 &middot; 6-Month Residency</span>
+            <h3 style="margin-bottom: var(--spacing-2);">Spatial Acoustics &amp; Psychoacoustic Architecture</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: var(--spacing-4);">Dedicated to sound artists exploring 64-channel ambisonic beam-forming, sub-bass infrasonics, and synchronized psychoacoustic entrainment.</p>
+            <ul style="list-style: none; padding: 0; margin: 0 0 var(--spacing-4) 0; font-size: 0.85rem; color: var(--text-main); display: flex; flex-direction: column; gap: var(--spacing-2);">
+              <li><i class="ph-fill ph-check-circle" style="color: var(--accent-3);"></i> $50,000 unrestricted production grant</li>
+              <li><i class="ph-fill ph-check-circle" style="color: var(--accent-3);"></i> Private 64-channel spatial sound dome</li>
+              <li><i class="ph-fill ph-check-circle" style="color: var(--accent-3);"></i> Vinyl &amp; digital spatial soundtrack release</li>
+            </ul>
+            <div style="background: var(--bg-main); padding: 8px 12px; border-radius: 6px; width: 100%; border: 1px solid var(--border);">
+              <span style="font-size: 0.75rem; color: var(--accent-3);">Recent Fellow Project:</span>
+              <p style="font-size: 0.82rem; margin: 0; color: var(--text-main); font-weight: 500;">"Resonant Cymatica" by Chloe Beauchamp</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-6);" class="animate-fade-up delay-4">
+          <p class="caption" style="color: var(--text-muted); margin-bottom: var(--spacing-3);">Applications for the 2027 International Fellowship Cohort open December 1st. Artists from underrepresented backgrounds are strongly encouraged to apply.</p>
+          <a href="contact.html" class="btn btn-outline">Inquire About Artist Residencies <i class="ph ph-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: The Historic Turbineworks Pavilion Architecture -->
+    <section class="section" id="architecture">
+      <div class="container split-row">
+        <div class="split-media animate-fade-up">
+          <div style="position: relative; overflow: hidden; border-radius: var(--radius); box-shadow: var(--shadow-lg);">
+            <img src="assets/images/about-turbineworks-pavilion.jpg" alt="LUMINA Historic 1928 Turbineworks Pavilion Exterior at Twilight"
+              style="border-radius: var(--radius); width: 100%; display: block;">
+            <div style="position: absolute; bottom: 12px; left: 12px; right: 12px; background: rgba(5, 6, 14, 0.85); backdrop-filter: blur(8px); padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 0.8rem; color: var(--accent); font-weight: 500;"><i class="ph ph-buildings"></i> Turbineworks Building &middot; Est. 1928</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Adaptive Heritage Reuse</span>
+            </div>
+          </div>
+        </div>
+        <div class="split-copy split-copy--center animate-fade-up delay-1">
+          <span class="eyebrow" style="margin-bottom: var(--spacing-2); display: inline-flex;"><span class="eyebrow-dot"></span> Architectural Heritage</span>
+          <h2>Adaptive Reuse: The 1928 Turbineworks</h2>
+          <p class="lead">From an industrial electrical powerhouse to a 15,000 sq. ft. temple of light and spatial sound.</p>
+          <p>LUMINA is housed inside the landmark 1928 Municipal Turbineworks station. Once housing massive steam dynamos that powered the city's early electric grid, the historic brick and structural steel hall has been meticulously revitalized into an acoustically isolated, light-tight sanctuary.</p>
+          <ul style="margin: var(--spacing-4) 0;">
+            <li style="margin-bottom: var(--spacing-2);"><strong>35-Foot Soaring Clear Ceilings:</strong> Colossal cathedral-scale overhead space allowing monumentally suspended prism crystals and volumetric lasers.</li>
+            <li style="margin-bottom: var(--spacing-2);"><strong>STC 72 Acoustic Decoupling:</strong> Triple-cavity insulated envelope walls drop external city ambient noise from 85 dBA down to an ultra-serene 22 dBA pin-drop silence.</li>
+            <li style="margin-bottom: var(--spacing-2);"><strong>0.0001 Lux Complete Optical Blackout:</strong> Multi-stage light-lock vestibules guarantee an absolute contrast floor for infinite cosmic depth.</li>
+          </ul>
+          <div style="margin-top: var(--spacing-4); display: flex; gap: var(--spacing-3); justify-content: center; flex-wrap: wrap;">
+            <a href="tickets.html" class="btn btn-primary">Experience the Pavilion Firsthand <i class="ph ph-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (Design and Layout exactly matches tickets.html) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: var(--spacing-3);"><img src="assets/images/campusly-logo.svg" alt="LUMINA" class="logo-img"></a>
+          <p>A world-class immersive art and light installation exhibit merging optics, laser architecture, and spatial sound into unforgettable sensory journeys.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="services.html">Tickets</a>
+            <a href="counselors.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="blog.html">Journal</a>
+            <a href="dashboard.html">Dashboard</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Visitor Information</h4>
+          <div class="footer-links">
+            <a href="services.html">Ticket Pricing</a>
+            <a href="services.html#faq">Sensory &amp; Entry FAQs</a>
+            <a href="contact.html#location-map">Location &amp; Directions</a>
+            <a href="blog.html">Sensory Journal</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Visitor Portal</h4>
+          <div class="footer-links">
+            <a href="login.html">Manage Tickets</a>
+            <a href="register.html">Create Account</a>
+            <a href="dashboard.html">Visitor Dashboard</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 LUMINA Immersive Art &amp; Light Installation Exhibit. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
