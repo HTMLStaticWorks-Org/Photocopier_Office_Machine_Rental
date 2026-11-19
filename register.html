@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up — LUMINA Visitor Portal</title>
-  <meta name="description" content="Create a LUMINA account to book timed-entry tickets, reserve visit timeslots, and access exclusive member privileges.">
-  
+  <title>Create Business Account — PrintCore Office Machine Rental</title>
+  <meta name="description" content="Register your company with PrintCore to request photocopiers, manage rental agreements, schedule technician support, and view monthly invoices.">
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  
+
   <!-- Icon Font -->
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  
+
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
@@ -33,87 +33,48 @@
   </div>
 
   <!-- Centered Auth Card Container -->
-  <main class="auth-card animate-fade-up">
+  <main class="auth-card animate-flip-up">
     <!-- Brand Logo -->
-    <a href="index.html" class="auth-brand" aria-label="LUMINA Home"><img src="assets/images/campusly-logo.svg" alt="LUMINA" class="logo-img"></a>
-    
+    <a href="index.html" class="auth-brand" aria-label="PrintCore Home"><img src="assets/images/campusly-logo.svg" alt="PrintCore Office Machine Rental" class="logo-img"></a>
+
     <!-- Title & Subtitle -->
-    <h1 class="auth-title">CREATE VISITOR PASS</h1>
-    <p class="auth-subtitle">Register to book timed-entry passes, choose timeslots &amp; access member benefits</p>
-    
-    <!-- Signup Form -->
+    <h1 class="auth-title">Create Business Account</h1>
+    <p class="auth-subtitle">Set up your company portal to request photocopier rentals, monitor fleet usage, and manage billing</p>
+
+    <!-- Register Form -->
     <form class="auth-form validate-form" action="dashboard.html" method="GET" novalidate>
-      <!-- Full Name Field -->
       <div class="form-group">
-        <label class="auth-label" for="name">FULL NAME</label>
-        <input type="text" id="name" name="name" class="auth-input form-control" required placeholder="" autocomplete="name">
+        <label class="auth-label" for="company">COMPANY NAME</label>
+        <input type="text" id="company" name="company" class="auth-input form-control" required placeholder="Meridian Legal Group">
       </div>
 
-      <!-- Email Field -->
       <div class="form-group">
-        <label class="auth-label" for="email">EMAIL ADDRESS</label>
-        <input type="email" id="email" name="email" class="auth-input form-control" required placeholder="" autocomplete="email">
+        <label class="auth-label" for="email">BUSINESS EMAIL</label>
+        <input type="email" id="email" name="email" class="auth-input form-control" required placeholder="operations@company.com" autocomplete="email">
       </div>
-      
-      <!-- Password Field with Visibility Toggle -->
+
       <div class="form-group">
         <label class="auth-label" for="password">PASSWORD</label>
         <div class="password-input-wrap">
-          <input type="password" id="password" name="password" class="auth-input form-control" required placeholder="" autocomplete="new-password">
+          <input type="password" id="password" name="password" class="auth-input form-control" required placeholder="Create a strong password" autocomplete="new-password">
           <button type="button" class="password-toggle" aria-label="Toggle password visibility">
             <i class="ph ph-eye"></i>
           </button>
         </div>
       </div>
 
-      <!-- Confirm Password Field with Visibility Toggle -->
-      <div class="form-group">
-        <label class="auth-label" for="confirm_password">CONFIRM PASSWORD</label>
-        <div class="password-input-wrap">
-          <input type="password" id="confirm_password" name="confirm_password" class="auth-input form-control" required placeholder="" autocomplete="new-password">
-          <button type="button" class="password-toggle" aria-label="Toggle confirm password visibility">
-            <i class="ph ph-eye"></i>
-          </button>
-        </div>
-      </div>
-      
-      <!-- Terms & Conditions Row -->
-      <div class="auth-terms-row">
-        <input type="checkbox" id="terms" name="terms" class="auth-checkbox" required>
-        <label for="terms" class="auth-terms-text">
-          I agree to the <a href="#" class="auth-link">Terms of Entry</a> and the <a href="#" class="auth-link">Privacy Policy</a>.
+      <div class="auth-controls-row">
+        <label class="auth-checkbox-label">
+          <input type="checkbox" name="terms" class="auth-checkbox" required>
+          <span>I agree to the rental portal terms</span>
         </label>
       </div>
-      
-      <!-- Submit Button -->
-      <button type="submit" class="btn-auth-submit">CREATE VISITOR ACCOUNT</button>
+
+      <button type="submit" class="btn-auth-submit">CREATE BUSINESS ACCOUNT</button>
     </form>
-    
-    <!-- Hairline OR Divider -->
-    <div class="auth-divider">
-      <span>OR</span>
-    </div>
-    
-    <!-- Social Login Buttons -->
-    <div class="auth-social-group">
-      <button type="button" class="btn-auth-social">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
-          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
-        </svg>
-        <span>Continue with Google</span>
-      </button>
-      <button type="button" class="btn-auth-social">
-        <i class="ph-fill ph-apple-logo"></i>
-        <span>Continue with Apple</span>
-      </button>
-    </div>
-    
-    <!-- Footer Registration Link -->
+
     <div class="auth-card-footer">
-      Already have an account? <a href="login.html">Sign in</a>
+      Already have a business account? <a href="login.html">Sign in here</a>
     </div>
   </main>
 

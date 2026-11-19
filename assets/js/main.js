@@ -4,25 +4,25 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================================== */
   const themeToggles = document.querySelectorAll('.theme-toggle');
   
-  // Check for saved theme preference or OS preference
-  const savedTheme = localStorage.getItem('lumina_theme') || localStorage.getItem('campusly_theme');
-  
-  // Set initial theme (Dark is default for immersive light exhibit)
-  if (savedTheme === 'light') {
-    document.documentElement.setAttribute('data-theme', 'light');
-    updateThemeIcons('light');
-  } else {
+  // Check for saved theme preference
+  const savedTheme = localStorage.getItem('printcore_theme');
+
+  // Set initial theme (Light corporate theme is default)
+  if (savedTheme === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
     updateThemeIcons('dark');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    updateThemeIcons('light');
   }
-  
+
   themeToggles.forEach(toggle => {
     toggle.addEventListener('click', () => {
       const currentTheme = document.documentElement.getAttribute('data-theme');
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      
+
       document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('lumina_theme', newTheme);
+      localStorage.setItem('printcore_theme', newTheme);
       updateThemeIcons(newTheme);
     });
   });
@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- Scroll reveal ---------- */
   function initReveal() {
-    var items = document.querySelectorAll('.animate-fade-up');
+    var items = document.querySelectorAll('.animate-fade-up, .animate-fade-down, .animate-fade-left, .animate-fade-right, .animate-zoom-in, .animate-zoom-out, .animate-flip-up, .animate-rotate-in, .animate-bounce-subtle');
     if (!items.length) return;
 
     if (!('IntersectionObserver' in window) || reduceMotion) {
@@ -359,7 +359,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 /* ==========================================================================
-   Interactive: Admissions Readiness Scorecard (index.html)
+   Interactive: Print Fleet & Rental Plan Estimator (index.html)
    ========================================================================== */
 (function () {
   'use strict';
@@ -384,28 +384,28 @@ document.addEventListener('DOMContentLoaded', () => {
     var tiers = [
       {
         min: 0,
-        label: 'Select your preferences',
-        note: 'Select your sensory preferences to curate your custom exhibit route and ideal timeslot.'
+        label: 'Select your office needs',
+        note: 'Choose your monthly print volume, team size, and output needs to match with the right photocopier rental plan.'
       },
       {
         min: 1,
-        label: 'Ambient Contemplative',
-        note: 'You thrive in serene, meditative light environments. We recommend spending extra time in the Bioluminescent Flora Canopy and booking a Morning Calm or Twilight slot.'
+        label: 'Starter Office Plan',
+        note: 'Ideal for small offices and startups. A compact A4/A3 monochrome or entry color multifunction copier with scheduled maintenance and toner included.'
       },
       {
         min: 45,
-        label: 'Dynamic Harmony',
-        note: 'You enjoy balanced rhythmic light, optical illusions, and spatial depth. Recommended route: Chromatic Infinity Chamber and Afternoon Radiance slot.'
+        label: 'Business Pro Plan',
+        note: 'Built for growing departments. High-speed 45–55 PPM A3 color multifunction copier with network print security, duplex scanning, and priority 4-hour SLA.'
       },
       {
-        min: 65,
-        label: 'Full Sensory Explorer',
-        note: 'You love interactive projection mapping, spatial acoustics, and motion-reactive light. Recommended: The Kinetic Laser Symphony & Sunset Illumination pass.'
+        min: 68,
+        label: 'Business Pro Multi-Unit',
+        note: 'Recommended for busy multi-team floors. Dual multifunction copiers plus dedicated desktop laser printers with automated toner replenishment.'
       },
       {
-        min: 82,
-        label: 'Hyper-Sensory Transcendence',
-        note: 'You seek maximum sensory immersion, high-frequency laser matrices, and resonant sub-bass sound baths. Recommended: After-Dark Neon Immersion with VIP Lounge access.'
+        min: 85,
+        label: 'Enterprise Fleet Plan',
+        note: 'Designed for high-volume corporate headquarters. Production-grade 70+ PPM fleet, pull-printing security, dedicated account manager, and custom SLA.'
       }
     ];
 
@@ -514,76 +514,76 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 /* ==========================================================================
-   Interactive: Application Timeline Explorer (home2.html)
+   Interactive: Managed Print Deployment Explorer (home2.html)
    ========================================================================== */
 (function () {
   'use strict';
 
   var PHASES = [
     {
-      id: 'vestibule',
+      id: 'audit',
       tab: 'Phase 01',
-      tag: 'Phase 01 - Lumina Vestibule',
-      title: 'Decompress from the outside world into pure darkness',
-      copy: 'Step into the acoustic threshold where ambient city sound dissolves. Your eyes calibrate to subtle optical wavelengths as warm, floating photon particles guide your first steps.',
+      tag: 'Phase 01 - Print Volume & Site Audit',
+      title: 'Right-size your office equipment before a single machine ships',
+      copy: 'Our print specialists evaluate your monthly page volume, paper sizes (A4/A3), floor layout, and security requirements to recommend the most cost-effective fleet.',
       items: [
-        ['Dark adaptation', 'Allow your vision to adjust across the twilight transition chamber.'],
-        ['Spatial acoustics', 'Binaural sub-bass tones lower your heart rate to a meditative rhythm.'],
-        ['Sensory wristband', 'Synched RFID beacon activates reactive installations as you approach.']
+        ['Volume assessment', 'Analyze monochrome vs. color ratios to eliminate overpaying for capacity.'],
+        ['Network & security check', 'Verify VLAN, Active Directory, and badge-release pull-printing readiness.'],
+        ['Transparent proposal', 'Fixed monthly rental rate with clear per-page allowances and zero hidden fees.']
       ],
-      stat: ['0 Hz – 20 kHz', 'full-spectrum binaural soundscape']
+      stat: ['24 Hours', 'from site assessment to tailored quote']
     },
     {
-      id: 'prismatic',
+      id: 'delivery',
       tab: 'Phase 02',
-      tag: 'Phase 02 - Chromatic Infinity',
-      title: 'Endless mirrored horizons and bending light waves',
-      copy: 'Walk upon suspended glass bridges inside an infinite mirrored void where 120,000 individually addressable suspended LEDs mirror constellations across infinite space.',
+      tag: 'Phase 02 - White-Glove Delivery & Setup',
+      title: 'Certified installation, driver deployment, and staff onboarding',
+      copy: 'Our logistics and engineering team delivers, levels, and connects every photocopier and scanner directly to your office network and workstations.',
       items: [
-        ['Infinity geometry', 'Two-way architectural mirrors creating endless spatial depth.'],
-        ['Color refraction', 'Dichroic prism filters splitting white lasers into pure hues.'],
-        ['Visitor reflection', 'Your silhouette becomes an integrated beacon within the matrix.']
+        ['Physical placement', 'Safe delivery, stair/elevator rigging, and ergonomic workstation positioning.'],
+        ['Driver & scan-to-cloud', 'Configured Scan-to-Email, SharePoint, and SMB network folders out of the box.'],
+        ['Team walkthrough', 'Hands-on 15-minute orientation so staff know duplex, booklet, and batch scan workflows.']
       ],
-      stat: ['120,000', 'suspended volumetric LED light points']
+      stat: ['48 Hours', 'average deployment turnaround']
     },
     {
-      id: 'lasers',
+      id: 'toner',
       tab: 'Phase 03',
-      tag: 'Phase 03 - Kinetic Laser Symphony',
-      title: 'Architectural lasers choreographed to 3D spatial acoustics',
-      copy: 'High-precision solid-state lasers sculpt luminous geometric planes and tunnels of light through atmospheric mist, pulsing in tight synchrony with orchestral electronic synthesis.',
+      tag: 'Phase 03 - Automated Toner & Supplies',
+      title: 'Never run out of toner or scramble for consumables again',
+      copy: 'Remote telemetry monitors toner levels and drum health in real time, dispatching genuine replacement cartridges before your team notices a low-toner alert.',
       items: [
-        ['Solid-state optics', 'Diffraction optics forming palpable architectural planes of light.'],
-        ['Spatial audio sync', '64-channel beam-formed acoustic arrays pulse with light bursts.'],
-        ['Dynamic haze', 'Pharmaceutical-grade organic haze capturing razor-sharp rays.']
+        ['Auto-replenishment', 'Toner cartridges ship automatically when levels drop below 15%.'],
+        ['Zero inventory clutter', 'Eliminate bulky supply closets and emergency retail toner purchases.'],
+        ['Eco-cartridge recycling', 'Prepaid return labels for responsible empty toner and drum recycling.']
       ],
-      stat: ['64 Channels', 'of beam-forming spatial acoustics']
+      stat: ['99.6%', 'first-time consumable availability']
     },
     {
-      id: 'canopy',
+      id: 'maintenance',
       tab: 'Phase 04',
-      tag: 'Phase 04 - Bioluminescent Canopy',
-      title: 'An organic ecosystem of reactive fiber-optic flora',
-      copy: 'Wander beneath a towering 20-foot botanical canopy that reacts to human touch, body heat, and footsteps. Glowing vines pulse with bioluminescent phosphorescence.',
+      tag: 'Phase 04 - Preventive Maintenance & SLA',
+      title: '4-hour on-site technician response keeps your office moving',
+      copy: 'Every rental agreement includes preventive maintenance visits, replacement rollers and fusers, and rapid on-site technician dispatch whenever an issue arises.',
       items: [
-        ['Haptic responsiveness', 'Fiber-optic fronds gently shift hue when brushed by visitors.'],
-        ['Thermodynamic sensors', 'Infrared vision arrays trace group presence into organic ripples.'],
-        ['Botanical aromatics', 'Subtle cedar, night-blooming jasmine, and ozone mist infusion.']
+        ['Scheduled tune-ups', 'Quarterly cleaning, calibration, and wear-part replacement included.'],
+        ['Rapid dispatch SLA', 'On-site certified technician within 4 business hours for priority plans.'],
+        ['Loaner guarantee', 'If a repair takes longer than one day, we deploy a comparable loaner unit.']
       ],
-      stat: ['450,000+', 'strands of reactive optical fiber']
+      stat: ['4 Hours', 'guaranteed priority technician response']
     },
     {
-      id: 'lounge',
+      id: 'analytics',
       tab: 'Phase 05',
-      tag: 'Phase 05 - The Reflection Lounge',
-      title: 'Reintegrate your senses over sensory tea & ambient projection',
-      copy: 'Conclude your journey in our meditative lounge. Savor chromatic herbal elixirs, explore the digital exhibition guide, and view high-resolution capture stills of your passage.',
+      tag: 'Phase 05 - Fleet Analytics & Flexible Scaling',
+      title: 'Monitor usage, control costs, and scale as your business grows',
+      copy: 'Access your PrintCore Business Dashboard anytime to track departmental print volumes, download monthly invoices, and add or upgrade machines effortlessly.',
       items: [
-        ['Elixir bar', 'Botanical drinks formulated for sensory grounding and hydration.'],
-        ['Digital exhibition guide', 'Download artist interviews and your personalized light portrait.'],
-        ['Artist editions', 'Limited-run prism prints and catalog in the Lumina boutique.']
+        ['Departmental tracking', 'Identify high-usage teams and enforce duplex or mono defaults to cut waste.'],
+        ['Consolidated billing', 'One predictable monthly invoice across all branches and devices.'],
+        ['Penalty-free upgrades', 'Step up to higher-PPM machines or add units as headcount expands.']
       ],
-      stat: ['99.4%', 'visitor satisfaction & awe rating']
+      stat: ['32% Avg.', 'reduction in total monthly print spend']
     }
   ];
 
@@ -709,6 +709,49 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         items.forEach(close); // one answer open at a time
         open(item);
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
+/* ==========================================================================
+   Interactive: Product Category Filter (counselors.html / exhibits.html)
+   ========================================================================== */
+(function () {
+  'use strict';
+
+  function init() {
+    var filterBar = document.querySelector('[data-filter-bar]');
+    if (!filterBar) return;
+
+    var buttons = filterBar.querySelectorAll('[data-filter]');
+    var cards = document.querySelectorAll('[data-category]');
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.getAttribute('data-filter');
+
+        buttons.forEach(function (b) {
+          b.classList.remove('btn-primary');
+          b.classList.add('btn-secondary');
+        });
+        btn.classList.remove('btn-secondary');
+        btn.classList.add('btn-primary');
+
+        cards.forEach(function (card) {
+          var cat = card.getAttribute('data-category') || '';
+          if (target === 'all' || cat.indexOf(target) !== -1) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
       });
     });
   }
