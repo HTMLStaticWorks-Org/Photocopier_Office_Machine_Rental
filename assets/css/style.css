@@ -906,6 +906,7 @@ html[dir="rtl"] .story-card-school {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--spacing-3);
   height: 84px;
   max-width: 1200px;
   margin: 0 auto;
@@ -1673,14 +1674,16 @@ html[dir="rtl"] .story-card-school {
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
-  padding: 5px 14px;
+  padding: 6px 16px;
   border-radius: var(--radius-pill);
   background: var(--gradient-accent);
   color: #fff;
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
 }
 
 .price-tier {
@@ -2020,8 +2023,8 @@ html[dir="rtl"] .story-card-school {
   }
 }
 
-/* 1024px Desktop Header (Matches 1440px layout with all 7 menus visible) */
-@media (min-width: 881px) and (max-width: 1200px) {
+/* 1025px - 1200px Desktop Header */
+@media (min-width: 1025px) and (max-width: 1200px) {
   .navbar-container {
     max-width: 100%;
     padding: 0 16px;
@@ -2053,7 +2056,7 @@ html[dir="rtl"] .story-card-school {
   }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1024px) {
 
   .nav-links,
   .nav-actions {
@@ -2461,23 +2464,7 @@ html.js .animate-bounce-subtle.in-view {
 
 .price-card.featured {
   position: relative;
-  overflow: hidden;
-}
-
-.price-card.featured::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(60deg,
-      transparent 40%,
-      rgba(255, 255, 255, 0.12) 50%,
-      transparent 60%);
-  transform: rotate(25deg);
-  animation: shimmerCard 6s ease-in-out infinite;
-  pointer-events: none;
+  overflow: visible;
 }
 
 @keyframes shimmerCard {
@@ -2874,20 +2861,24 @@ html[dir="rtl"] .password-toggle {
 }
 
 .auth-link {
+  display: inline-block;
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--accent);
   text-decoration: none;
-  transition: color 0.2s, opacity 0.2s;
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
-.auth-link:hover {
-  color: var(--accent-deep);
+.auth-link:hover,
+[data-theme="dark"] .auth-link:hover {
+  color: var(--accent-2);
   text-decoration: underline;
+  text-underline-offset: 3px;
+  transform: translateY(-1px);
 }
 
 [data-theme="dark"] .auth-link {
-  color: var(--accent-2);
+  color: var(--accent);
 }
 
 /* Signup Terms Row */
@@ -3037,19 +3028,24 @@ html[dir="rtl"] .password-toggle {
 }
 
 .auth-card-footer a {
+  display: inline-block;
   color: var(--accent);
   font-weight: 600;
   text-decoration: none;
   margin-inline-start: 4px;
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
-.auth-card-footer a:hover {
-  color: var(--accent-deep);
+.auth-card-footer a:hover,
+[data-theme="dark"] .auth-card-footer a:hover {
+  color: var(--accent-2);
   text-decoration: underline;
+  text-underline-offset: 3px;
+  transform: translateY(-1px);
 }
 
 [data-theme="dark"] .auth-card-footer a {
-  color: var(--accent-2);
+  color: var(--accent);
 }
 
 @media (max-width: 768px) {
@@ -3133,10 +3129,34 @@ html[dir="rtl"] .password-toggle {
 .sidebar-head {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2);
   height: var(--topbar-h);
   flex: 0 0 auto;
   padding: 0 var(--spacing-4);
   border-bottom: 1px solid var(--border);
+}
+
+.sidebar-close {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  color: var(--text-main);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition), background-color var(--transition);
+}
+
+.sidebar-close:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background-color: var(--accent-tint);
 }
 
 .sidebar-head .logo {
@@ -3262,13 +3282,16 @@ html[dir="rtl"] .password-toggle {
   flex: 1;
   min-width: 0;
   margin-inline-start: var(--sidebar-w);
+  padding-top: var(--topbar-h);
   display: flex;
   flex-direction: column;
 }
 
 .dashboard-topbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  inset-inline-start: var(--sidebar-w);
+  inset-inline-end: 0;
   z-index: 50;
   height: var(--topbar-h);
   flex: 0 0 auto;
@@ -3279,6 +3302,7 @@ html[dir="rtl"] .password-toggle {
   padding: 0 var(--gutter);
   background-color: var(--bg-elevated);
   border-bottom: 1px solid var(--border);
+  box-sizing: border-box;
 }
 
 .topbar-lead {
@@ -3528,6 +3552,15 @@ html[dir="rtl"] .password-toggle {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--spacing-4);
   margin-bottom: var(--spacing-4);
+  align-items: stretch;
+}
+
+.dash-stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--spacing-4);
+  text-align: start;
 }
 
 /* The marketing .stat-value paints itself with a clipped gradient;
@@ -3539,17 +3572,23 @@ html[dir="rtl"] .password-toggle {
   letter-spacing: normal;
   font-weight: var(--weight-body);
   margin-bottom: var(--spacing-2);
+  text-align: start;
 }
 
 .dash-stat .stat-value {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
   font-family: var(--font-heading);
-  font-size: 2.4rem;
+  font-size: clamp(1.85rem, 1.8vw, 2.2rem);
   font-weight: var(--weight-h2);
-  line-height: 1;
+  line-height: 1.15;
   margin-bottom: 0;
   background: none;
   color: var(--primary);
   -webkit-text-fill-color: currentColor;
+  text-align: start;
 }
 
 .dash-stat .stat-unit {
@@ -3558,7 +3597,8 @@ html[dir="rtl"] .password-toggle {
   font-weight: var(--weight-body);
   color: var(--text-muted);
   -webkit-text-fill-color: currentColor;
-  margin-inline-start: 6px;
+  margin-inline-start: 0;
+  white-space: nowrap;
 }
 
 .progress-track {
@@ -3801,8 +3841,8 @@ html[dir="rtl"] .password-toggle {
   }
 }
 
-/* ---------- Below 1024: sidebar collapses to an off-canvas drawer ---------- */
-@media (max-width: 1023.98px) {
+/* ---------- 1024 and below: sidebar collapses to an off-canvas drawer ---------- */
+@media (max-width: 1024px) {
   .dashboard-sidebar {
     transform: translateX(-100%);
     transition: transform 0.35s var(--ease-out);
@@ -3827,8 +3867,25 @@ html[dir="rtl"] .password-toggle {
     margin-inline-start: 0;
   }
 
+  .dashboard-topbar {
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+  }
+
   .topbar-lead {
     display: flex;
+  }
+
+  .topbar-lead .logo-img {
+    height: 44px !important;
+  }
+
+  .sidebar-close {
+    display: inline-flex;
+  }
+
+  .sidebar-head .logo-img {
+    height: 42px !important;
   }
 }
 
@@ -3861,6 +3918,7 @@ html[dir="rtl"] .password-toggle {
 
   .dashboard-topbar {
     gap: var(--spacing-2);
+    padding: 0 var(--spacing-3);
   }
 
   /* Burger + wordmark + three controls barely fit under 480px, so the lead
@@ -3876,6 +3934,10 @@ html[dir="rtl"] .password-toggle {
     font-size: 1.05rem;
     white-space: nowrap;
     overflow: hidden;
+  }
+
+  .topbar-lead .logo-img {
+    height: 34px !important;
   }
 
   .topbar-lead .logo i {
@@ -4397,7 +4459,9 @@ html[dir="rtl"] .hero-bg--start .hero-bg-media::after {
 
 .voices-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 760px;
+  margin: 0 auto;
   gap: var(--spacing-5);
   align-items: stretch;
 }
@@ -4555,7 +4619,7 @@ html[dir="rtl"] .hero-bg--start .hero-bg-media::after {
 
 @media (max-width: 1023px) {
   .voices-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .voice-card--feature {

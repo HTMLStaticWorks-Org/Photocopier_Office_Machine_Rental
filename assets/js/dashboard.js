@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   const sidebar = document.querySelector('.dashboard-sidebar');
   const toggle = document.getElementById('sidebar-toggle');
+  const closeBtn = document.getElementById('sidebar-close');
   const scrim = document.getElementById('sidebar-scrim');
 
-  // Below this width the sidebar becomes an off-canvas drawer (see style.css)
+  // At 1024px and below the sidebar becomes an off-canvas drawer (see style.css)
   const DRAWER_BREAKPOINT = 1024;
-  const isDrawer = () => window.innerWidth < DRAWER_BREAKPOINT;
+  const isDrawer = () => window.innerWidth <= DRAWER_BREAKPOINT;
 
   const setDrawer = (open) => {
     if (!sidebar) return;
@@ -14,12 +15,21 @@ document.addEventListener('DOMContentLoaded', () => {
       scrim.classList.toggle('open', open);
       scrim.hidden = !open;
     }
-    if (toggle) toggle.setAttribute('aria-expanded', String(open));
+    if (toggle) {
+      toggle.setAttribute('aria-expanded', String(open));
+      const icon = toggle.querySelector('i');
+      if (icon) {
+        icon.className = open ? 'ph ph-x' : 'ph ph-list';
+      }
+    }
     document.body.style.overflow = open ? 'hidden' : '';
   };
 
   if (toggle) {
     toggle.addEventListener('click', () => setDrawer(!sidebar.classList.contains('open')));
+  }
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => setDrawer(false));
   }
   if (scrim) {
     scrim.addEventListener('click', () => setDrawer(false));

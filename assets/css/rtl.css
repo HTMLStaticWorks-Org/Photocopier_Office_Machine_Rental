@@ -10,15 +10,15 @@ html[dir="rtl"] .section-header {
   text-align: center; /* Keep headers centered */
 }
 
-/* Margin and Padding logical adjustments */
-html[dir="rtl"] .nav-links {
-  margin-left: 0;
-  margin-right: auto;
+/* Navbar layout in RTL mirrors LTR symmetrically via justify-content: space-between */
+html[dir="rtl"] .navbar-container {
+  justify-content: space-between;
+  gap: var(--spacing-3);
 }
 
+html[dir="rtl"] .nav-links,
 html[dir="rtl"] .logo {
-  margin-right: 0;
-  margin-left: auto;
+  margin: 0;
 }
 
 /* Drawer adjustments */
